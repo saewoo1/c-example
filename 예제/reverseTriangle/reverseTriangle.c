@@ -1,30 +1,25 @@
 #include <stdio.h>
 
-int main()
+int main(void)
+
 {
-    int i = 1;
+    int n;
     int line, space, star;
-    space = 1;
-    star = 1;
 
-    printf("삼각형의 높이는? : ");
-    scanf("%d", &line);
+    printf("삼각형의 높이:");
+    scanf("%d", &n); //입력
 
-    while (i <= line)
+    for (line = 0; line < n; line++) //n개 라인
     {
-        while (space < i)
+        for (space = 0; space < line; space++) //공백 line개
         {
-            printf(" ");
-            space++;
+            putchar(' ');
         }
-        while (star <= line * 2 - 1)
+        for (star = 0; star < 2 * (n - line) - 1; star++) //별 2*(n-line)-1개
         {
-            printf("*");
-            star++;
+            putchar('*'); //별 출력
         }
-        printf("\n");
-        i++;
+        putchar('\n'); //개행
     }
-
     return 0;
 }
