@@ -3,6 +3,7 @@
 int main(void)
 
 {
+
     int n;
     int line, space, star;
 
